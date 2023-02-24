@@ -6,7 +6,7 @@ public class SnakeAndLadder {
     static final int IF_SNAKE = 2;
     static final int NO_PLAY = 0;
     static int currentPosition = 0;
-
+    static int die = 0;
     public static void main(String[] args) {
         while (currentPosition < 100) {
             int dieNumber = (int) (Math.random() * 10) % 6 + 1;
@@ -24,7 +24,9 @@ public class SnakeAndLadder {
             if (currentPosition > 100){
                 currentPosition -= dieNumber;
             }
-            System.out.println(currentPosition);
+            System.out.println(" current position is :" +currentPosition);
+            die++;
         }
+        System.out.println("Total Number Of Times Die Rolled Are : " + die);
     }
 }
