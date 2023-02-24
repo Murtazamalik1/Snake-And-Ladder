@@ -16,6 +16,9 @@ public class SnakeAndLadder {
         } else if (option == NO_PLAY) {
             System.out.println("No Play :");
         }
-        System.out.println(option);
+        if (currentPosition < START_POSITION){
+            currentPosition = 0;
+        }
+        System.out.println(currentPosition);
     }
 }
